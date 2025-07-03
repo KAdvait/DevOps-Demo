@@ -1,0 +1,9 @@
+services:
+  web:
+    image: test:1  # lowercase repo name
+    container_name: devops-demo-web
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
